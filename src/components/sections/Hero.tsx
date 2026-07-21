@@ -110,11 +110,13 @@ export function Hero() {
           </motion.div>
 
           <motion.div variants={item} className="mt-16 flex items-center gap-6">
-            <Magnetic intensity={0.3}>
-              <a href={resumeData.contact.github} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors p-2">
-                <GithubIcon className="w-6 h-6" />
-              </a>
-            </Magnetic>
+            {(resumeData.contact as any).github && (
+              <Magnetic intensity={0.3}>
+                <a href={(resumeData.contact as any).github} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors p-2">
+                  <GithubIcon className="w-6 h-6" />
+                </a>
+              </Magnetic>
+            )}
             <Magnetic intensity={0.3}>
               <a href={resumeData.contact.linkedin} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#0a66c2] transition-colors p-2">
                 <LinkedinIcon className="w-6 h-6" />

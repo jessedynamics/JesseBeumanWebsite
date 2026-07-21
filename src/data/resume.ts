@@ -1,17 +1,17 @@
 export const resumeData = {
   name: "Jesse Beuman",
-  title: "Full-Stack Developer & UI/UX Enthusiast", // Updated title for the portfolio, as requested
+  title: "R&D Vision Engineer and all-round Automation enthusiast", // Updated title for the portfolio, as requested
   about: "I am a passionate engineer with experience in building scalable systems and creating stunning digital experiences.",
   contact: {
-    email: "jesse@example.com",
+    email: "jessebeuman@gmail.com",
     linkedin: "https://linkedin.com/in/jessebeuman",
-    github: "https://github.com/jessebeuman",
+    // github: "https://github.com/jessebeuman",
   },
   experience: [
     {
       role: "R&D Vision Engineer",
-      company: "[Company Name]",
-      location: "Netherlands",
+      company: "Sormac",
+      location: "Venlo, Netherlands",
       duration: "April 2024 - Present",
       description: [
         "Fully automatic processing of bell peppers from bulk to end product (Machine: PCR).",
@@ -22,8 +22,8 @@ export const resumeData = {
     },
     {
       role: "Prototype/Vision Engineer",
-      company: "[Company Name]",
-      location: "Netherlands",
+      company: "VinciTech",
+      location: "Eindhoven, Netherlands",
       duration: "Oct 2020 - April 2024",
       description: [
         "Customer specific Vision and Robotics solutions.",
@@ -67,48 +67,49 @@ export const resumeData = {
       challenge: "The goal was to transform a standard, static resume into an engaging digital experience that stands out to recruiters and peers, highlighting my transition from Mechanical Engineering to Software Engineering.",
       solution: "I architected a completely custom, multi-page Next.js application leveraging React Server Components. I utilized Framer Motion to create complex, physics-based scroll animations and seamless page transitions. I also integrated Lenis for buttery-smooth scrolling, ensuring the high-performance animations felt natively fluid.",
       results: "The resulting portfolio achieves an Awwwards-tier level of interaction and aesthetic polish, serving as a highly effective digital calling card that perfectly encapsulates my technical capabilities and design sensibilities.",
-      image: "", // Placeholder for main image
-      gallery: ["", "", ""], // Placeholders for gallery images
-      link: "https://github.com/jessebeuman",
+      image: "/images/website.png", // Placeholder for main image
+      gallery: [], // Placeholders for gallery images
+      link: "https://jessebeuman.com",
       tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"]
     },
     {
       slug: "bell-pepper-sorter",
-      title: "Bell Pepper Sorter",
-      description: "Machine vision system for fully automatic processing and classification of bell peppers.",
-      challenge: "Processing bell peppers from bulk to end-product manually is highly labor-intensive and prone to human error. The challenge was to engineer a system capable of real-time classification and orientation without damaging the delicate produce.",
-      solution: "I developed a comprehensive machine vision pipeline using Python and MVTec Halcon. This pipeline ingests high-speed camera data and applies specialized Deep Learning models to rapidly identify, classify, and determine the optimal orientation of each pepper as it moves down the processing line.",
-      results: "The deployed PCR machine successfully automated the sorting process, drastically reducing manual labor costs and significantly increasing the throughput and consistency of the final packaged product.",
-      image: "",
-      gallery: ["", "", ""],
-      link: "#",
+      title: "PepperCorer Robotics",
+      description: "Machine vision system for fully automatic processing of bell peppers.",
+      challenge: "Processing bell peppers from bulk to end-product manually is highly labor-intensive and prone to human error. The challenge was to engineer a system capable of real-time orientation without damaging the delicate produce.",
+      solution: "I developed a comprehensive machine vision pipeline using C# and MVTec Halcon. This pipeline ingests high-speed camera data and applies specialized Deep Learning models to rapidly identify, classify, and determine the optimal orientation of each pepper as it moves down the processing line.",
+      results: "The deployed PCR machine successfully automated the sorting process, drastically reducing manual labor costs of the final packaged product.",
+      image: "/images/PCR.png",
+      gallery: [],
+      link: "https://sormac.com/nl-nl/machines/peppercorer-robotic-pcr",
       tech: ["Python", "MVTec Halcon", "Deep Learning", "Computer Vision"]
-    },
-    {
-      slug: "mobile-manipulator",
-      title: "Mobile Manipulator",
-      description: "Optimization algorithm for consecutive pick and place tasks for a mobile robotic manipulator.",
-      challenge: "Mobile manipulators often waste significant time and energy due to inefficient path planning between consecutive pick and place operations on the factory floor.",
-      solution: "During my Master's thesis at TU Eindhoven, I researched and developed an advanced optimization algorithm focused on the kinematics and dynamics of a mobile manipulator. The algorithm dynamically calculates the most energy-efficient and fastest trajectory for the robot arm and base simultaneously.",
-      results: "The simulated implementation of the algorithm demonstrated a marked decrease in cycle times and energy consumption compared to standard sequential movement protocols.",
-      image: "",
-      gallery: ["", "", ""],
-      link: "#",
-      tech: ["Robotics", "Kinematics", "Optimization", "Control Systems"]
     }
+    // {
+    //   slug: "mobile-manipulator",
+    //   title: "Mobile Manipulator",
+    //   description: "Optimization algorithm for consecutive pick and place tasks for a mobile robotic manipulator.",
+    //   challenge: "Mobile manipulators often waste significant time and energy due to inefficient path planning between consecutive pick and place operations on the factory floor.",
+    //   solution: "During my Master's thesis at TU Eindhoven, I researched and developed an advanced optimization algorithm focused on the kinematics and dynamics of a mobile manipulator. The algorithm dynamically calculates the most energy-efficient and fastest trajectory for the robot arm and base simultaneously.",
+    //   results: "The simulated implementation of the algorithm demonstrated a marked decrease in cycle times and energy consumption compared to standard sequential movement protocols.",
+    //   image: "",
+    //   gallery: ["", "", ""],
+    //   link: "#",
+    //   tech: ["Robotics", "Kinematics", "Optimization", "Control Systems"]
+    // }
   ],
   skills: [
     "Python",
+    "MVTec Halcon",
     "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
+    // "TypeScript",
+    // "React",
+    // "Next.js",
+    // "Tailwind CSS",
     "Linux",
-    "C++",
+    "C#",
     "Computer Vision",
     "Robotics",
-    "Deep Learning"
+    "Deep Learning",
   ],
   detailedAbout: [
     "My journey began in Mechanical Engineering, where I developed a deep fascination for the physical world and how things move. During my Master's at TU Eindhoven, focusing on Dynamics and Control, I started writing complex algorithms to optimize mobile manipulators. It was here that I realized my true passion lay at the intersection of hardware and software.",
@@ -123,6 +124,14 @@ export const resumeData = {
   interests: [
     { title: "Robotics & Automation", description: "Fascinated by the mechanics and algorithms that allow machines to perceive and interact with the world." },
     { title: "Artificial Intelligence", description: "Deeply interested in the practical applications of deep learning and computer vision." },
-    { title: "UI/UX Design", description: "Passionate about creating stunning, intuitive, and highly interactive digital experiences." }
+    { title: "UI/UX Design", description: "Gaining an interest in creating stunning, intuitive, and highly interactive digital experiences." }
+  ],
+  personalInterests: [
+    // { title: "Photography", description: "Capturing moments and exploring visual storytelling through a camera lens.", image: "", gallery: [] },
+    { title: "Hiking & Outdoors", description: "Disconnecting from screens and spending weekends exploring trails and nature.", image: "/images/hiking.jpeg", gallery: [] },
+    { title: "Cycling", description: "Clearing my mind and stretching the legs.", image: "/images/fiets.jpeg", gallery: [] },
+    { title: "Motorcycle rides", description: "For when a bike just isn't fast enough.", image: "/images/motor1.jpeg", gallery: ["/images/motor1.jpeg" , "/images/motor2.jpeg"] },
+    // { title: "Culinary Experiments", description: "Trying out complex new recipes and perfecting the art of homemade pasta.", image: "", gallery: [] },
+    // { title: "Reading", description: "Diving into sci-fi novels and staying up to date with the latest tech biographies.", image: "", gallery: [] }
   ]
 };
