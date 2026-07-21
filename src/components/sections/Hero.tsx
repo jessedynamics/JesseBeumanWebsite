@@ -59,15 +59,15 @@ export function Hero() {
           </motion.p>
           
           <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="#projects"
+            <Link 
+              href="/projects"
               className="group relative px-8 py-4 rounded-xl bg-foreground text-background font-semibold overflow-hidden transition-all hover:scale-105 active:scale-95"
             >
               <div className="absolute inset-0 w-full h-full bg-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               <span className="relative flex items-center gap-2">
                 View Work <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
-            </a>
+            </Link>
             
             <a 
               href="/resume.pdf"

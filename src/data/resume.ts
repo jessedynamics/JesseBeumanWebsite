@@ -94,5 +94,20 @@ export const resumeData = {
     "Computer Vision",
     "Robotics",
     "Deep Learning"
+  ],
+  detailedAbout: [
+    "My journey began in Mechanical Engineering, where I developed a deep fascination for the physical world and how things move. During my Master's at TU Eindhoven, focusing on Dynamics and Control, I started writing complex algorithms to optimize mobile manipulators. It was here that I realized my true passion lay at the intersection of hardware and software.",
+    "Transitioning into a Vision Engineer role, I applied my theoretical knowledge to build real-world, scalable robotics and vision solutions. Over the years, I've mastered Python, C++, and deep learning frameworks to create fully automatic systems that process and classify complex data in real-time.",
+    "Today, I leverage this unique blend of mechanical intuition and advanced software engineering to solve challenging problems. I am constantly exploring new technologies and pushing the boundaries of what automated systems can achieve, all while maintaining a strong focus on clean architecture and beautiful user experiences."
+  ],
+  values: [
+    { title: "Innovation", description: "Continuously pushing the boundaries of technology to find novel solutions to complex problems.", icon: "Lightbulb" },
+    { title: "Precision", description: "Bringing a mechanical engineer's exactness into software architecture and computer vision models.", icon: "Target" },
+    { title: "Efficiency", description: "Automating repetitive tasks and optimizing systems for maximum performance and reliability.", icon: "Zap" },
+  ],
+  interests: [
+    { title: "Robotics & Automation", description: "Fascinated by the mechanics and algorithms that allow machines to perceive and interact with the world." },
+    { title: "Artificial Intelligence", description: "Deeply interested in the practical applications of deep learning and computer vision." },
+    { title: "UI/UX Design", description: "Passionate about creating stunning, intuitive, and highly interactive digital experiences." }
   ]
 };

@@ -4,8 +4,15 @@ import { motion } from "framer-motion";
 import { resumeData } from "@/data/resume";
 import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/ui/Icons";
+import Link from "next/link";
 
-export function Projects() {
+interface ProjectsProps {
+  limit?: number;
+}
+
+export function Projects({ limit }: ProjectsProps) {
+  const displayedProjects = limit ? resumeData.projects.slice(0, limit) : resumeData.projects;
+
   return (
     <section id="projects" className="py-24 relative">
       <div className="container mx-auto px-6 max-w-6xl">
@@ -13,16 +20,27 @@ export function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="mb-16 md:mb-24"
+          className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            Selected Work <span className="text-primary">.</span>
-          </h2>
-          <p className="text-gray-400 text-lg">A showcase of some of my recent projects</p>
+          <div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+              Selected Work <span className="text-primary">.</span>
+            </h2>
+            <p className="text-gray-400 text-lg">A showcase of some of my recent projects</p>
+          </div>
+          
+          {limit && (
+            <Link 
+              href="/projects" 
+              className="inline-flex items-center gap-2 text-primary hover:text-white transition-colors"
+            >
+              View all projects <span>&rarr;</span>
+            </Link>
+          )}
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {resumeData.projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
