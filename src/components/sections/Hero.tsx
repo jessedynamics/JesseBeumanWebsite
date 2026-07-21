@@ -6,6 +6,7 @@ import { ArrowRight, Download, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
 import { resumeData } from "@/data/resume";
 import Link from "next/link";
+import { Magnetic } from "@/components/ui/Magnetic";
 
 export function Hero() {
   const ref = useRef(null);
@@ -85,35 +86,45 @@ export function Hero() {
           </motion.p>
           
           <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/projects"
-              className="group relative px-8 py-4 rounded-xl bg-foreground text-background font-semibold overflow-hidden transition-all hover:scale-105 active:scale-95"
-            >
-              <div className="absolute inset-0 w-full h-full bg-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-              <span className="relative flex items-center gap-2">
-                View Work <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Link>
+            <Magnetic intensity={0.2}>
+              <Link 
+                href="/projects"
+                className="group relative px-8 py-4 rounded-xl bg-foreground text-background font-semibold overflow-hidden transition-all hover:scale-105 active:scale-95 inline-flex"
+              >
+                <div className="absolute inset-0 w-full h-full bg-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                <span className="relative flex items-center gap-2">
+                  View Work <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            </Magnetic>
             
-            <a 
-              href="/resume.pdf"
-              target="_blank"
-              className="group px-8 py-4 rounded-xl glass-card font-semibold flex items-center gap-2 transition-all hover:bg-white/5 hover:scale-105 active:scale-95"
-            >
-              Resume <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
-            </a>
+            <Magnetic intensity={0.2}>
+              <a 
+                href="/resume.pdf"
+                target="_blank"
+                className="group px-8 py-4 rounded-xl glass-card font-semibold flex items-center gap-2 transition-all hover:bg-white/5 hover:scale-105 active:scale-95"
+              >
+                Resume <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+              </a>
+            </Magnetic>
           </motion.div>
 
           <motion.div variants={item} className="mt-16 flex items-center gap-6">
-            <a href={resumeData.contact.github} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
-              <GithubIcon className="w-6 h-6" />
-            </a>
-            <a href={resumeData.contact.linkedin} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#0a66c2] transition-colors">
-              <LinkedinIcon className="w-6 h-6" />
-            </a>
-            <a href={`mailto:${resumeData.contact.email}`} className="text-gray-400 hover:text-primary transition-colors">
-              <Mail className="w-6 h-6" />
-            </a>
+            <Magnetic intensity={0.3}>
+              <a href={resumeData.contact.github} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors p-2">
+                <GithubIcon className="w-6 h-6" />
+              </a>
+            </Magnetic>
+            <Magnetic intensity={0.3}>
+              <a href={resumeData.contact.linkedin} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#0a66c2] transition-colors p-2">
+                <LinkedinIcon className="w-6 h-6" />
+              </a>
+            </Magnetic>
+            <Magnetic intensity={0.3}>
+              <a href={`mailto:${resumeData.contact.email}`} className="text-gray-400 hover:text-primary transition-colors p-2">
+                <Mail className="w-6 h-6" />
+              </a>
+            </Magnetic>
           </motion.div>
         </motion.div>
       </div>

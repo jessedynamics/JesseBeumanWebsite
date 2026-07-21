@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Magnetic } from "@/components/ui/Magnetic";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,33 +43,36 @@ export function Navbar() {
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`relative px-5 py-2 text-sm font-medium transition-colors rounded-full ${
-                  isActive ? "text-white" : "text-gray-400 hover:text-white hover:bg-white/10"
-                }`}
-              >
-                {isActive && (
-                  <motion.div 
-                    layoutId="navbar-indicator"
-                    className="absolute inset-0 bg-white/10 rounded-full -z-10 border border-white/10"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-                {link.name}
-              </Link>
+              <Magnetic intensity={0.1} key={link.name}>
+                <Link
+                  href={link.href}
+                  className={`relative px-5 py-2 text-sm font-medium transition-colors rounded-full flex ${
+                    isActive ? "text-white" : "text-gray-400 hover:text-white hover:bg-white/10"
+                  }`}
+                >
+                  {isActive && (
+                    <motion.div 
+                      layoutId="navbar-indicator"
+                      className="absolute inset-0 bg-white/10 rounded-full -z-10 border border-white/10"
+                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    />
+                  )}
+                  {link.name}
+                </Link>
+              </Magnetic>
             );
           })}
-        </nav>
+      </nav>
 
+      <Magnetic intensity={0.2}>
         <Link 
           href="/contact"
           className="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium rounded-full bg-white text-black hover:scale-105 active:scale-95 transition-all"
         >
           Let's Talk
         </Link>
-      </div>
-    </motion.header>
-  );
+      </Magnetic>
+    </div>
+  </motion.header>
+);
 }

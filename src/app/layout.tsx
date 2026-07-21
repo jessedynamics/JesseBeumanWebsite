@@ -37,7 +37,7 @@ export default function RootLayout({
           {/* Global Noise Overlay */}
           <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay" />
         </div>
-
+        
         <SmoothScrollProvider>
           <Navbar />
           {children}

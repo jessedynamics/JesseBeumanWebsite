@@ -61,25 +61,40 @@ export const resumeData = {
   ],
   projects: [
     {
+      slug: "interactive-portfolio",
       title: "Interactive Portfolio",
       description: "A stunning, interactive web portfolio built with Next.js, Tailwind CSS, and Framer Motion.",
-      image: "", // Placeholder for image
-      link: "https://github.com",
+      challenge: "The goal was to transform a standard, static resume into an engaging digital experience that stands out to recruiters and peers, highlighting my transition from Mechanical Engineering to Software Engineering.",
+      solution: "I architected a completely custom, multi-page Next.js application leveraging React Server Components. I utilized Framer Motion to create complex, physics-based scroll animations and seamless page transitions. I also integrated Lenis for buttery-smooth scrolling, ensuring the high-performance animations felt natively fluid.",
+      results: "The resulting portfolio achieves an Awwwards-tier level of interaction and aesthetic polish, serving as a highly effective digital calling card that perfectly encapsulates my technical capabilities and design sensibilities.",
+      image: "", // Placeholder for main image
+      gallery: ["", "", ""], // Placeholders for gallery images
+      link: "https://github.com/jessebeuman",
       tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"]
     },
     {
+      slug: "bell-pepper-sorter",
       title: "Bell Pepper Sorter",
       description: "Machine vision system for fully automatic processing and classification of bell peppers.",
+      challenge: "Processing bell peppers from bulk to end-product manually is highly labor-intensive and prone to human error. The challenge was to engineer a system capable of real-time classification and orientation without damaging the delicate produce.",
+      solution: "I developed a comprehensive machine vision pipeline using Python and MVTec Halcon. This pipeline ingests high-speed camera data and applies specialized Deep Learning models to rapidly identify, classify, and determine the optimal orientation of each pepper as it moves down the processing line.",
+      results: "The deployed PCR machine successfully automated the sorting process, drastically reducing manual labor costs and significantly increasing the throughput and consistency of the final packaged product.",
       image: "",
+      gallery: ["", "", ""],
       link: "#",
-      tech: ["Python", "MVTec Halcon", "Deep Learning"]
+      tech: ["Python", "MVTec Halcon", "Deep Learning", "Computer Vision"]
     },
     {
+      slug: "mobile-manipulator",
       title: "Mobile Manipulator",
       description: "Optimization algorithm for consecutive pick and place tasks for a mobile robotic manipulator.",
+      challenge: "Mobile manipulators often waste significant time and energy due to inefficient path planning between consecutive pick and place operations on the factory floor.",
+      solution: "During my Master's thesis at TU Eindhoven, I researched and developed an advanced optimization algorithm focused on the kinematics and dynamics of a mobile manipulator. The algorithm dynamically calculates the most energy-efficient and fastest trajectory for the robot arm and base simultaneously.",
+      results: "The simulated implementation of the algorithm demonstrated a marked decrease in cycle times and energy consumption compared to standard sequential movement protocols.",
       image: "",
+      gallery: ["", "", ""],
       link: "#",
-      tech: ["Robotics", "Kinematics", "Optimization"]
+      tech: ["Robotics", "Kinematics", "Optimization", "Control Systems"]
     }
   ],
   skills: [
