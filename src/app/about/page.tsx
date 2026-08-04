@@ -21,7 +21,7 @@ export default function AboutPage() {
       {/* Experience Timeline */}
       <Experience />
 
-      {/* Education Summary */}
+      {/* Education Summary
       <section className="py-24 relative bg-white/[0.02]">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="font-display text-4xl font-bold mb-12">
@@ -43,7 +43,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

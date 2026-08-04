@@ -9,9 +9,52 @@ export const resumeData = {
   },
   experience: [
     {
+      role: "Bachelor of Science: Mechanical Engineering",
+      company: "TU Delft",
+      location: "Delft, Netherlands",
+      coordinates: { lat: 52.0116, lng: 4.3571 },
+      duration: "Sep 2012 - July 2016",
+      description: ["Bachelor Thesis: The performance of clingfish inspired suction cups on rough surfaces."],
+      skills: ["Mechanical Engineering", "Research"],
+    },
+    {
+      role: "Collegerama Operator",
+      company: "TU Delft",
+      location: "Delft, Netherlands",
+      coordinates: { lat: 52.0116, lng: 4.3571 },
+      duration: "Oct 2013 - July 2016",
+      description: [
+        "Recording the lectures of a large variety of Bachelor and Master courses.",
+        "Assisting the lecturers and supervising the lecture rooms."
+      ],
+      skills: ["Video Production", "Technical Support"],
+    },
+    {
+      role: "Master of Science: Mechanical Engineering – Dynamics and Control",
+      company: "TU Eindhoven",
+      location: "Eindhoven, Netherlands",
+      coordinates: { lat: 51.4416, lng: 5.4714 },
+      duration: "Sep 2016 - Oct 2020",
+      description: ["Focus on Dynamics, Control, Manufacturing Engineering, Optimization, Kinematics. Master Thesis: Optimization of a mobile manipulator for consecutive pick and place tasks."],
+      skills: ["Dynamics", "Control", "Optimization", "Kinematics", "Robotics"],
+    },
+    {
+      role: "Prototype/Vision Engineer",
+      company: "VinciTech",
+      location: "Eindhoven, Netherlands",
+      coordinates: { "lng": 5.446762, "lat": 51.434315, "zoom": 13},
+      duration: "Oct 2020 - April 2024",
+      description: [
+        "Customer specific Vision and Robotics solutions.",
+        "Defect detection, size determination, object localization, robot path planning, kinematics, adaptive robot pick and placing, advanced algorithms."
+      ],
+      skills: ["Python", "JavaScript", "Linux", "Robotics", "Project Planning"],
+    },
+    {
       role: "R&D Vision Engineer",
       company: "Sormac",
       location: "Venlo, Netherlands",
+      coordinates: {  "lng": 6.185906, "lat": 51.391651,"zoom": 12 },
       duration: "April 2024 - Present",
       description: [
         "Fully automatic processing of bell peppers from bulk to end product (Machine: PCR).",
@@ -21,44 +64,22 @@ export const resumeData = {
       skills: ["MVTec Halcon", "Deep Learning", "AI", "Python"],
     },
     {
-      role: "Prototype/Vision Engineer",
-      company: "VinciTech",
-      location: "Eindhoven, Netherlands",
-      duration: "Oct 2020 - April 2024",
+      role: "R&D Software Engineer?",
+      company: "?",
+      location: "30 minutes from asten, Netherlands",
+      coordinates: { "lng": 5.745876,
+      "lat": 51.404094,
+      "zoom": 9},
+      duration: "April 2024 - Present",
       description: [
-        "Customer specific Vision and Robotics solutions.",
-        "Defect detection, size determination, object localization, robot path planning, kinematics, adaptive robot pick and placing, advanced algorithms."
+        "Fully automatic processing of bell peppers from bulk to end product (Machine: PCR).",
+        "Practical application of Deep Learning Models for vegetable recognition for classification and orientation.",
+        "Automation of repetitive daily tasks for reduction of effort and gaining insight in data."
       ],
-      skills: ["Python", "JavaScript", "Linux", "Robotics", "Project Planning"],
-    },
-    {
-      role: "Collegerama Operator",
-      company: "TU Delft",
-      location: "Delft, Netherlands",
-      duration: "Oct 2013 - July 2016",
-      description: [
-        "Recording the lectures of a large variety of Bachelor and Master courses.",
-        "Assisting the lecturers and supervising the lecture rooms."
-      ],
-      skills: ["Video Production", "Technical Support"],
+      skills: ["MVTec Halcon", "Deep Learning", "AI", "Python"],
     }
   ],
-  education: [
-    {
-      degree: "Master of Science: Mechanical Engineering – Dynamics and Control",
-      school: "TU Eindhoven",
-      location: "Eindhoven, Netherlands",
-      duration: "Sep 2016 - Oct 2020",
-      description: "Focus on Dynamics, Control, Manufacturing Engineering, Optimization, Kinematics. Master Thesis: Optimization of a mobile manipulator for consecutive pick and place tasks."
-    },
-    {
-      degree: "Bachelor of Science: Mechanical Engineering",
-      school: "TU Delft",
-      location: "Delft, Netherlands",
-      duration: "Sep 2012 - July 2016",
-      description: "Bachelor Thesis: The performance of clingfish inspired suction cups on rough surfaces."
-    }
-  ],
+  education: [],
   projects: [
     {
       slug: "interactive-portfolio",
