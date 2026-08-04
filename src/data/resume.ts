@@ -132,7 +132,7 @@ export const resumeData = {
   ],
   detailedAbout: [
     "My journey began in Mechanical Engineering, where I developed a deep fascination for the physical world and how things move. During my Master's at TU Eindhoven, focusing on Dynamics and Control, I started writing complex algorithms to optimize mobile manipulators. It was here that I realized my true passion lay at the intersection of hardware and software.",
-    "Transitioning into a Vision Engineer role, I applied my theoretical knowledge to build real-world, scalable robotics and vision solutions. Over the years, I've mastered Python, C++, and deep learning frameworks to create fully automatic systems that process and classify complex data in real-time.",
+    "Transitioning into a Vision Engineer role, I applied my theoretical knowledge to build real-world, scalable robotics and vision solutions. Over the years, I've mastered Python,C#, and deep learning frameworks to create fully automatic systems that process and classify complex data in real-time.",
     "Today, I leverage this unique blend of mechanical intuition and advanced software engineering to solve challenging problems. I am constantly exploring new technologies and pushing the boundaries of what automated systems can achieve, all while maintaining a strong focus on clean architecture and beautiful user experiences."
   ],
   values: [
