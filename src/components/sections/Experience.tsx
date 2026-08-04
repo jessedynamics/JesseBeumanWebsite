@@ -93,7 +93,7 @@ export function Experience() {
     if (coords && mapRef.current) {
       mapRef.current.flyTo({
         center: [coords.lng, coords.lat],
-        zoom: 12,
+        zoom: coords.zoom || 12,
         duration: 1500,
         essential: true,
       });
@@ -142,7 +142,7 @@ export function Experience() {
               initialViewState={{
                 longitude: initialLocation?.lng || 5.4714,
                 latitude: initialLocation?.lat || 51.4416,
-                zoom: 12
+                zoom: 6
               }}
               mapStyle="/custom-map-style.json"
               interactive={true}

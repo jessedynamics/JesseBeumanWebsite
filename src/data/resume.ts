@@ -12,7 +12,7 @@ export const resumeData = {
       role: "Bachelor of Science: Mechanical Engineering",
       company: "TU Delft",
       location: "Delft, Netherlands",
-      coordinates: { lat: 52.0116, lng: 4.3571 },
+      coordinates: { lat: 52.0116, lng: 4.3571 , "zoom" : 13},
       duration: "Sep 2012 - July 2016",
       description: ["Bachelor Thesis: The performance of clingfish inspired suction cups on rough surfaces."],
       skills: ["Mechanical Engineering", "Research"],
@@ -21,7 +21,7 @@ export const resumeData = {
       role: "Collegerama Operator",
       company: "TU Delft",
       location: "Delft, Netherlands",
-      coordinates: { lat: 52.0116, lng: 4.3571 },
+      coordinates: { lat: 52.0116, lng: 4.3571 , "zoom" : 13 },
       duration: "Oct 2013 - July 2016",
       description: [
         "Recording the lectures of a large variety of Bachelor and Master courses.",
@@ -33,7 +33,7 @@ export const resumeData = {
       role: "Master of Science: Mechanical Engineering – Dynamics and Control",
       company: "TU Eindhoven",
       location: "Eindhoven, Netherlands",
-      coordinates: { lat: 51.4416, lng: 5.4714 },
+      coordinates: { lat: 51.4416, lng: 5.4714, zoom: 13 },
       duration: "Sep 2016 - Oct 2020",
       description: ["Focus on Dynamics, Control, Manufacturing Engineering, Optimization, Kinematics. Master Thesis: Optimization of a mobile manipulator for consecutive pick and place tasks."],
       skills: ["Dynamics", "Control", "Optimization", "Kinematics", "Robotics"],
@@ -69,14 +69,11 @@ export const resumeData = {
       location: "30 minutes from asten, Netherlands",
       coordinates: { "lng": 5.745876,
       "lat": 51.404094,
-      "zoom": 9},
-      duration: "April 2024 - Present",
-      description: [
-        "Fully automatic processing of bell peppers from bulk to end product (Machine: PCR).",
-        "Practical application of Deep Learning Models for vegetable recognition for classification and orientation.",
-        "Automation of repetitive daily tasks for reduction of effort and gaining insight in data."
+      "zoom": 8.5},
+      duration: "When the time is right",
+      description: ["Automation, AI, Software, Vision"
       ],
-      skills: ["MVTec Halcon", "Deep Learning", "AI", "Python"],
+      skills: [],
     }
   ],
   education: [],
