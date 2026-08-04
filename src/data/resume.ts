@@ -64,9 +64,10 @@ export const resumeData = {
       slug: "interactive-portfolio",
       title: "Interactive Portfolio",
       description: "A stunning, interactive web portfolio built with Next.js, Tailwind CSS, and Framer Motion.",
-      challenge: "The goal was to transform a standard, static resume into an engaging digital experience that stands out to recruiters and peers, highlighting my transition from Mechanical Engineering to Software Engineering.",
+      challenge: "The goal was to transform a standard, static resume into an engaging digital experience that stands out to recruiters and peers, highlighting my transition from Mechanical Engineering to Software Engineering. Furthermore, I try to work a lot with AI tools to get to know them and stay proficient with them.",
       solution: "I architected a completely custom, multi-page Next.js application leveraging React Server Components. I utilized Framer Motion to create complex, physics-based scroll animations and seamless page transitions. I also integrated Lenis for buttery-smooth scrolling, ensuring the high-performance animations felt natively fluid.",
       results: "The resulting portfolio achieves an Awwwards-tier level of interaction and aesthetic polish, serving as a highly effective digital calling card that perfectly encapsulates my technical capabilities and design sensibilities.",
+      // Why: "",
       image: "/images/website.png", // Placeholder for main image
       gallery: [], // Placeholders for gallery images
       link: "https://jessebeuman.com",

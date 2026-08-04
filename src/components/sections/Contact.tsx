@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { useState } from "react";
 import { resumeData } from "@/data/resume";
+import { supabase } from "@/lib/supabase";
 
 export function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -12,13 +13,47 @@ export function Contact() {
     e.preventDefault();
     setStatus("loading");
     
-    // Simulate API call
-    setTimeout(() => {
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+
+    try {
+      // 1. Insert into Supabase (for database record)
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert([{ name, email, message }]);
+
+      if (error) throw error;
+
+      // 2. Send email via Web3Forms
+      const web3FormsResponse = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          name: name,
+          email: email,
+          message: message,
+        }),
+      });
+
+      if (!web3FormsResponse.ok) {
+        throw new Error("Failed to send email via Web3Forms");
+      }
+
       setStatus("success");
       (e.target as HTMLFormElement).reset();
       
       setTimeout(() => setStatus("idle"), 3000);
-    }, 1500);
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 3000);
+    }
   };
 
   return (
@@ -68,6 +103,7 @@ export function Contact() {
                   <input 
                     type="text" 
                     id="name" 
+                    name="name"
                     required
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
                     placeholder="John Doe"
@@ -79,6 +115,7 @@ export function Contact() {
                   <input 
                     type="email" 
                     id="email" 
+                    name="email"
                     required
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
                     placeholder="john@example.com"
@@ -89,6 +126,7 @@ export function Contact() {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">Message</label>
                   <textarea 
                     id="message" 
+                    name="message"
                     required
                     rows={4}
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none"
