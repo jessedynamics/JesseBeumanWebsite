@@ -3,7 +3,7 @@ export const resumeData = {
   title: "R&D Vision Engineer and all-round Automation enthusiast", // Updated title for the portfolio, as requested
   about: "I am a passionate engineer with experience in building scalable systems and creating stunning digital experiences.",
   contact: {
-    email: "jessebeuman@gmail.com",
+    email: "jessemakessoftware@gmail.com",
     linkedin: "https://linkedin.com/in/jessebeuman",
     // github: "https://github.com/jessebeuman",
   },
