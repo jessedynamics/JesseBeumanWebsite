@@ -21,7 +21,7 @@ export default async function ProjectCaseStudy(props: { params: Promise<{ slug: 
   return (
     <main className="min-h-screen pt-32 pb-20">
       <div className="container mx-auto px-6 max-w-4xl">
-        <Link href="/projects" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12">
+        <Link href="/portfolio/projects" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12">
           <ArrowLeft className="w-4 h-4" /> Back to Projects
         </Link>
 

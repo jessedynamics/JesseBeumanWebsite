@@ -28,11 +28,9 @@
     --foreground: #ffffff;
   }
   
+  /* Colours and fonts are set per site: .theme-portfolio (portfolio/layout.tsx)
+     and .games (src/app/(games)/games.css). */
   body {
-    background-color: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-sans);
-    scroll-behavior: smooth;
     overflow-x: hidden;
   }
 }
@@ -66,22 +64,4 @@
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(to right, #00f3ff, #0088ff);
   }
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
 }

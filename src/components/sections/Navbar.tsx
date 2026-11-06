@@ -19,11 +19,12 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Interests", href: "/interests" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "/portfolio" },
+    { name: "About", href: "/portfolio/about" },
+    { name: "Projects", href: "/portfolio/projects" },
+    { name: "Interests", href: "/portfolio/interests" },
+    { name: "Contact", href: "/portfolio/contact" },
+    { name: "Games", href: "/" },
   ];
 
   return (
@@ -36,7 +37,7 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="font-display text-2xl font-bold tracking-tighter text-white">
+        <Link href="/portfolio" className="font-display text-2xl font-bold tracking-tighter text-white">
           JB<span className="text-primary">.</span>
         </Link>
 
@@ -67,7 +68,7 @@ export function Navbar() {
 
       <Magnetic intensity={0.2}>
         <Link 
-          href="/contact"
+          href="/portfolio/contact"
           className="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium rounded-full bg-white text-black hover:scale-105 active:scale-95 transition-all"
         >
           Let's Talk

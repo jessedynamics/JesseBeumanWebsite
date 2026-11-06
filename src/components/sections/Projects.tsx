@@ -31,7 +31,7 @@ export function Projects({ limit }: ProjectsProps) {
           
           {limit && (
             <Link 
-              href="/projects" 
+              href="/portfolio/projects" 
               className="inline-flex items-center gap-2 text-primary hover:text-white transition-colors"
             >
               View all projects <span>&rarr;</span>
@@ -41,7 +41,7 @@ export function Projects({ limit }: ProjectsProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedProjects.map((project, index) => (
-            <Link href={`/projects/${project.slug}`} key={index}>
+            <Link href={`/portfolio/projects/${project.slug}`} key={index}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

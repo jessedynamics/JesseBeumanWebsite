@@ -88,7 +88,7 @@ export function Hero() {
           <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
             <Magnetic intensity={0.2}>
               <Link 
-                href="/projects"
+                href="/portfolio/projects"
                 className="group relative px-8 py-4 rounded-xl bg-foreground text-background font-semibold overflow-hidden transition-all hover:scale-105 active:scale-95 inline-flex"
               >
                 <div className="absolute inset-0 w-full h-full bg-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
